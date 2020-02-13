@@ -21,6 +21,9 @@ gem "sass-rails", "~> 5.0"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
 gem "webpacker", "~> 4.0"
+gem "bcrypt", "~> 3.1.7"
+gem "rack-cors"
+gem "jwt_sessions", "~> 2.3"
 
 # Background Jobs Adapter
 gem "sidekiq"
@@ -61,4 +64,4 @@ group :test do
   end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
