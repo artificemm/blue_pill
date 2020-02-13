@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", http_equiv: "Content-Type"}
+    %link{rel: "stylesheet", href: "https://use.fontawesome.com/releases/v5.6.3/css/all.css", integrity: "sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/", crossorigin: "anonymous"}
+    %title BluePill | SMA Server
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    .header
+      .container
+        = render partial: 'layouts/nav'
+    %section{class: "section"}
+      .container
+        = yield
+    %footer{class: "footer"}
+      .container
+        Copyright © 2019 MyApp. All rights reserved.

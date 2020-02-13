@@ -1,9 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Edit/Remove the following sections as you wish.
+Tesis de licenciatura. Proyecto: Localización de personas mediante un sistema multiagente híbrido.
 
 ## System Requirements
 
