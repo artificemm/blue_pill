@@ -28,7 +28,7 @@ gem "jwt_sessions", "~> 2.3"
 gem "uuid", "~> 2.3", ">= 2.3.8"
 
 # Background Jobs Adapter
-gem "sidekiq"
+# gem "sidekiq"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
