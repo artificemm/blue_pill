@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   get 'pages/dashboard'
 
 
-  require 'sidekiq/web'
-  mount Sidekiq::Web => '/sidekiq'
+  # require 'sidekiq/web'
+  # mount Sidekiq::Web => '/sidekiq'
 
   root to: 'pages#home'
 
