@@ -21,15 +21,17 @@ gem "sass-rails", "~> 5.0"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
 gem "webpacker", "~> 4.0"
+gem "simple_form"
 gem "bcrypt", "~> 3.1.7"
 gem "rack-cors"
 gem "jwt_sessions", "~> 2.3"
+gem "uuid", "~> 2.3", ">= 2.3.8"
 
 # Background Jobs Adapter
 gem "sidekiq"
 
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+# gem "redis", "~> 4.0"
 
 
 

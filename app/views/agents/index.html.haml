@@ -1,0 +1,27 @@
+%h1 Listing agents
+
+%table
+  %thead
+    %tr
+      %th Uuid
+      %th A model
+      %th A make
+      %th User
+      %th
+      %th
+      %th
+
+  %tbody
+    - @agents.each do |agent|
+      %tr
+        %td= agent.uuid
+        %td= agent.a_model
+        %td= agent.a_make
+        %td= agent.user
+        %td= link_to 'Show', agent
+        %td= link_to 'Edit', edit_agent_path(agent)
+        %td= link_to 'Destroy', agent, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Agent', new_agent_path

@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Uuid:
+  = @agent.uuid
+%p
+  %b A model:
+  = @agent.a_model
+%p
+  %b A make:
+  = @agent.a_make
+%p
+  %b User:
+  = @agent.user
+
+= link_to 'Edit', edit_agent_path(@agent)
+\|
+= link_to 'Back', agents_path

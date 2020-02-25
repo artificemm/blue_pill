@@ -5,8 +5,19 @@
   .level-right
     %p{class: "level-item"}
       / = link_to("Manage Users", users_path, class: "button is-dark is-outlined")
-    %p.level-item
-      %a.button
-        %span{class: "icon"}
-          %i{class: "fab fa-github"}
-        %span GitHub
+    - if user_signed_in?
+      %p.level-item
+        = link_to 'Inicio', pages_home_path
+      %p.level-item
+        = link_to 'Tablero', pages_dashboard_path
+      %p.level-item
+        = link_to destroy_user_session_path, method: :delete, class: 'button' do
+          %span{class: "icon"}
+            %i{class: "fab fa-sign-out"}
+          %span Cerrar sesión
+    - else
+      %p.level-item
+        = link_to new_user_session_path, class: 'button' do
+          %span{class: "icon"}
+            %i{class: "fab fa-sign-in-alt"}
+          %span Iniciar sesión
