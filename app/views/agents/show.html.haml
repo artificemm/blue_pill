@@ -1,18 +1,18 @@
 %p#notice= notice
 
 %p
-  %b Uuid:
+  %b UUID:
   = @agent.uuid
 %p
-  %b A model:
+  %b Model:
   = @agent.a_model
 %p
-  %b A make:
+  %b Marca:
   = @agent.a_make
 %p
-  %b User:
+  %b Usuario:
   = @agent.user
 
-= link_to 'Edit', edit_agent_path(@agent)
+= link_to 'Editar', edit_agent_path(@agent)
 \|
-= link_to 'Back', agents_path
+= link_to 'Atrás', agents_path

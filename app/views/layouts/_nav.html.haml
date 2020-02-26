@@ -11,6 +11,8 @@
       %p.level-item
         = link_to 'Tablero', pages_dashboard_path
       %p.level-item
+        = link_to 'Agentes', agents_path
+      %p.level-item
         = link_to destroy_user_session_path, method: :delete, class: 'button' do
           %span{class: "icon"}
             %i{class: "fab fa-sign-out"}

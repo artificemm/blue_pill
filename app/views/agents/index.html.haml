@@ -1,12 +1,12 @@
-%h1 Listing agents
+%h1 Lista de agentes
 
-%table
+%table.table
   %thead
     %tr
-      %th Uuid
-      %th A model
-      %th A make
-      %th User
+      %th UUID
+      %th Modelo
+      %th Fabricante
+      %th Usuario
       %th
       %th
       %th
@@ -17,11 +17,11 @@
         %td= agent.uuid
         %td= agent.a_model
         %td= agent.a_make
-        %td= agent.user
-        %td= link_to 'Show', agent
-        %td= link_to 'Edit', edit_agent_path(agent)
-        %td= link_to 'Destroy', agent, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= agent.user&.handle
+        %td= link_to 'Mostrar', agent
+        %td= link_to 'Editar', edit_agent_path(agent)
+        %td= link_to 'Borrar', agent, method: :delete, data: { confirm: '¿Estás seguro?' }
 
 %br
 
-= link_to 'New Agent', new_agent_path
+= link_to 'Nuevo agente', new_agent_path
