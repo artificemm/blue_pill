@@ -11,5 +11,6 @@
 #  updated_at :datetime         not null
 #
 class Agent < ApplicationRecord
-  belongs_to :user, optional: true
+  belongs_to :user, inverse_of: :agents
+  has_many :beacons, through: :user
 end

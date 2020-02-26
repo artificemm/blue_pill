@@ -1,0 +1,27 @@
+%h1 Índice de beacons
+
+%table.table
+  %thead
+    %tr
+      %th UUID
+      %th Mayor
+      %th Menor
+      %th Usuario
+      %th
+      %th
+      %th
+
+  %tbody
+    - @beacons.each do |beacon|
+      %tr
+        %td= beacon.uuid
+        %td= beacon.major
+        %td= beacon.minor
+        %td= beacon.user&.handle
+        %td= link_to 'Mostrar', beacon
+        %td= link_to 'Editar', edit_beacon_path(beacon)
+        %td= link_to 'Borrar', beacon, method: :delete, data: { confirm: '¿Estás seguro?' }
+
+%br
+
+= link_to 'Nuevo beacon', new_beacon_path
