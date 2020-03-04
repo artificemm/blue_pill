@@ -21,5 +21,6 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :recoverable, :rememberable, :validatable, :timeoutable
   has_many :agents
-  has_many :beacons
+  has_many :ownerships
+  has_many :beacons, through: :ownerships
 end

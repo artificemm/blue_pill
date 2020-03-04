@@ -1,4 +1,7 @@
 class Beacon < ApplicationRecord
-  belongs_to :user, inverse_of: :beacons
-  has_one :agent, through: :user
+  has_one :ownership
+  has_one :user, through: :ownership
+  validates :user, uniqueness: true
+    # validates :beacon_id, uniqueness: { scope: :user_id }
+
 end

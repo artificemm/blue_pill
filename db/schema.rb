@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_13_053831) do
+ActiveRecord::Schema.define(version: 2020_03_03_144139) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,25 @@ ActiveRecord::Schema.define(version: 2020_02_13_053831) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_agents_on_user_id"
+  end
+
+  create_table "beacons", force: :cascade do |t|
+    t.string "uuid"
+    t.integer "major"
+    t.integer "minor"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_beacons_on_user_id"
+  end
+
+  create_table "ownerships", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "beacon_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["beacon_id"], name: "index_ownerships_on_beacon_id", unique: true
+    t.index ["user_id"], name: "index_ownerships_on_user_id", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -41,4 +60,7 @@ ActiveRecord::Schema.define(version: 2020_02_13_053831) do
   end
 
   add_foreign_key "agents", "users"
+  add_foreign_key "beacons", "users"
+  add_foreign_key "ownerships", "beacons"
+  add_foreign_key "ownerships", "users"
 end
