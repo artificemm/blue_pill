@@ -11,7 +11,7 @@ gem "pg", ">= 0.18", "< 2.0"
 gem "bootsnap", ">= 1.4.4", require: false
 gem "devise"
 gem "haml-rails"
-gem "image_processing", "~> 1.2"
+gem "image_processing", "~> 1.12"
 gem "interactor-rails"
 gem "oj", "~> 3"
 gem "puma", "~> 4.1"
